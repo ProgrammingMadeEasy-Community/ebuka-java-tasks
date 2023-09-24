@@ -41,25 +41,25 @@ public class AgeComparison {
         };
 
         System.out.println("Name: " + person.name);
-        System.out.println("Birthday: " + monthNames[person.birthday.month - 1] + " " + person.birthday.day + ", " + person.birthday.year);
+        System.out.println("Birthday: " + monthNames[person.birthday.getMonth() - 1] + " " + person.birthday.getDay() + ", " + person.birthday.getYear());
     }
 
     public static void whoIsOlder(Person person1, Person person2) {
-        int yearDifference = person1.birthday.year - person2.birthday.year;
+        int yearDifference = person1.birthday.getYear() - person2.birthday.getYear();
 
         if (yearDifference < 0) {
             System.out.println(person1.name + " is younger than " + person2.name + " by " + (-yearDifference) + " years.");
         } else if (yearDifference > 0) {
             System.out.println(person1.name + " is older than " + person2.name + " by " + yearDifference + " years.");
         } else {
-            int monthDifference = person1.birthday.month - person2.birthday.month;
+            int monthDifference = person1.birthday.getMonth()  - person2.birthday.getMonth() ;
 
             if (monthDifference < 0) {
                 System.out.println(person1.name + " is younger than " + person2.name + " by a few months.");
             } else if (monthDifference > 0) {
                 System.out.println(person1.name + " is older than " + person2.name + " by a few months.");
             } else {
-                int dayDifference = person1.birthday.day - person2.birthday.day;
+                int dayDifference = person1.birthday.getDay() - person2.birthday.getDay();
 
                 if (dayDifference < 0) {
                     System.out.println(person1.name + " is younger than " + person2.name + " by a few days.");

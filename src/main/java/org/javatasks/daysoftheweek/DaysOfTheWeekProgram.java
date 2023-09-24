@@ -46,7 +46,7 @@ public class DaysOfTheWeekProgram {
     // Task 3: Method to store and count user inputs
     public static void DaysOfTheWeek(int... dayNumbers) {
         try {
-            Map<DayOfWeek, Integer> dayCountMap = new HashMap<>();
+            Map <DayOfWeek, Integer> dayCountMap = new HashMap<>();
             for (int dayNumber : dayNumbers) {
                 DayOfWeek day = DayOfWeek.values()[dayNumber - 1];
                 dayCountMap.put(day, dayCountMap.getOrDefault(day, 0) + 1);
